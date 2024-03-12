@@ -11,6 +11,7 @@ builder.Services.AddDbContext<PizzaContext>(options =>
     options.UseSqlite("Data Source=ContosoPizza.db"));
 
 var app = builder.Build();
+builder.Services.AddScoped<PizzaService>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
